@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBTools - Учет инструмента на предприятии | Учет инструмента в производстве</title>
+    
+    <meta name="description" content="Программа DBTools для учета инструмента на предприятии. Система учета инструмента в производстве, учет выдачи и расхода инструмента, складской учет. Программа учета режущего инструмента. Скачать учет инструмента.">
+    <meta name="keywords" content="учет инструмента, программа учета инструмента, система учета инструмента, учет инструмента на предприятии, учет инструмента в производстве, на производстве, учет выдачи инструментов, учет расхода инструмента, инвентаризация инструмента, инструментальное хозяйство, складской учет инструмента, база данных инструмента, учет режущего инструмента, учет фрез, учет сверл, учет резцов, автоматизация учета инструмента, цифровой учет инструментов, скачать бесплатно учет инструмента">
+    
+    <!-- Schema.org разметка -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DBTools - Программа учета инструмента",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Windows",
+        "description": "Программа для учета режущего инструмента на предприятиях металлообработки. Система учета инструмента.",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Годовая подписка",
+                "price": "3000",
+                "priceCurrency": "RUB"
+            },
+            {
+                "@type": "Offer", 
+                "name": "Бессрочная лицензия",
+                "price": "40000",
+                "priceCurrency": "RUB"
+            }
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "DBTools",
+            "url": "https://dbtools.ru"
+        }
+    }
+    </script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Яндекс.Метрика -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105734714', 'ym');
+        ym(105734714, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105734714" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-tools"></i></div>
+                <div>
+                    <div class="logo-text">DBTools</div>
+                    <div class="logo-subtitle">Учет инструмента</div>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#features">Возможности</a>
+                <a href="#screenshots">Скриншоты</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#pricing">Цена</a>
+                <a href="#free">Скачать</a>
+                <a href="#contacts">Контакты</a>
+                <a href="blog.html">Блог</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Программа учета инструмента на предприятии</h1>
+                <p><strong>DBTools</strong> — это <strong>система учета инструмента</strong> для металлообработки, которая обеспечивает полный контроль над <strong>учетом режущего инструмента</strong> (фрез, сверл, резцов) и мерительного инструмента на складе и в цеху. Наша программа решает задачи <strong>учета выдачи инструментов</strong>, контроля расхода, списания и проведения инвентаризации.</p>
+                <a href="#contacts" class="cta-button">Получить консультацию</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/logo.jpg" alt="Интерфейс программы учета инструмента DBTools">
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Возможности -->
+    <section class="section" id="features">
+        <div class="container">
+            <h2 class="section-title">Основные возможности</h2>
+            <p class="section-subtitle">Полный контроль над инструментальным хозяйством вашего предприятия</p>
+            
+            <!-- Основные карточки возможностей -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-database"></i></div>
+                    <h3>База данных инструмента</h3>
+                    <p>Централизованная <strong>база данных инструмента</strong> с полной информацией о каждом инструменте: тип, параметры, место хранения, история перемещений.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-digital-tachograph"></i></div>
+                    <h3>Цифровой учет инструмента</h3>
+                    <p>Переход от бумажных журналов к <strong>цифровому учету инструментов</strong>. Все данные доступны онлайн с любого ПК на вашем предприятии.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Автоматизация учета инструмента</h3>
+                    <p><strong>Автоматизация учета инструмента</strong> сокращает ручной труд на 80%. Система сама формирует отчеты на закупку инструмента на основе минимальных остатков на складе.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Учет инструмента</h3>
+                    <p>Учет фрез, учет сверл, учет резцов, метчиков, пластин, а также мерительного инструмента: штангенциркулей, микрометров и т.д.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-filter"></i></div>
+                    <h3>Умный фильтр</h3>
+                    <p>Поиск инструмента по параметрам: диаметр, режущая часть, общая длина, количество зубьев и другим характеристикам.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-warehouse"></i></div>
+                    <h3>Контроль мест хранения</h3>
+                    <p>Точное указание места хранения инструмента: стеллаж, ящик, секция.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3>Учет сотрудников</h3>
+                    <p>Добавление, изменение и удаление сотрудников. Назначение логинов и паролей. Просмотр инструмента, закрепленного за сотрудниками.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3>Управление выдачей и возвратом</h3>
+                    <p>Оформление выдачи инструмента наладчикам, возврат на склад, отправка в переточку или списание в лом.</p>
+                </div>
+				<div class="feature-card">
+					<div class="feature-icon"><i class="fas fa-cogs"></i></div>
+					<h3>Сервис учета инструмента</h3>
+					<p>Полноценный <strong>сервис учета инструмента</strong> с технической поддержкой, обновлениями и консультациями по внедрению.</p>
+				</div>
+            </div>
+            <!-- Конец основных карточек -->
+
+            <!-- Подраздел: Специализация -->
+            <div class="specialization-section">
+                <h3 class="specialization-title">Специализация: учет режущего инструмента</h3>
+                <p class="specialization-subtitle">DBTools создана специально для предприятий металлообработки с акцентом на <strong>учет режущего инструмента</strong>. Мы понимаем специфику работы с фрезами, сверлами и резцами.</p>
+                
+                <div class="specialization-grid">
+                    <div class="specialization-card">
+                        <div class="specialization-icon-circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <h4>Учет фрез</h4>
+                        <p>Детальный <strong>учет фрез</strong> по диаметру, длине, типу хвостовика, количеству зубьев и материалу.</p>
+                    </div>
+                    <div class="specialization-card">
+                        <div class="specialization-icon-circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <h4>Учет сверл</h4>
+                        <p>Полный <strong>учет сверл</strong> с классификацией по диаметру, углу заточки, длине и назначению.</p>
+                    </div>
+                    <div class="specialization-card">
+                        <div class="specialization-icon-circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <h4>Учет резцов</h4>
+                        <p>Специализированный <strong>учет резцов</strong> для токарных работ с учетом геометрии и материалов.</p>
+                    </div>
+                    <div class="specialization-card">
+                        <div class="specialization-icon-circle">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <h4>Учет инструментов и оснастки</h4>
+                        <p>Комплексный <strong>учет инструментов и оснастки</strong> — от режущего инструмента до мерителя.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Конец подраздела -->
+
+            <!-- Широкий текстовый блок -->
+            <div class="wide-card accent-style">
+                <h3>Учет инструмента в производстве</h3>
+                <p>Наша система обеспечивает полный <strong>учет инструмента в производстве</strong>: от поступления на склад до списания. Это комплексное решение для <strong>автоматизации учета инструмента</strong> на производстве. Контролируйте <strong>учет инструмента на складе</strong> и <strong>учет инструмента в цехе</strong> в одной программе. DBTools поможет вам выстроить эффективное <strong>инструментальное хозяйство предприятия</strong>, решить вопросы <strong>организации учета инструмента</strong> на современном предприятии.</p>
+                <p>Превратите обычный склад в современную инструментальную кладовую с четкой системой хранения и быстрым поиском. DBTools - это комплексная <strong>организация инструментального хозяйства</strong> для малого и среднего бизнеса.</p>
+                <p>DBTools автоматизирует все основные операции учета инструмента на предприятии, делая процессы прозрачными и контролируемыми. Наша <strong>система контроля режущего инструмента</strong> помогает отслеживать износ, планировать переточку, своевременно выводить из эксплуатации изношенный инструмент и автоматически создавать заявки на закупку новго инструмента на основе складских остатков.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Секция: Скриншоты -->
+    <section class="section screenshots" id="screenshots">
+        <div class="container">
+            <h2 class="section-title">Интерфейс программы учета инструмента</h2>
+            <p class="section-subtitle">Убедитесь сами — интерфейс DBTools интуитивно понятен даже для новичков. Все функции <strong>системы учета инструмента</strong> доступны в несколько кликов.</p>
+            
+            <div class="screenshot-grid">
+                <div class="screenshot-container">
+                    <div class="screenshot-item" data-src="images/1.jpg">
+                        <img src="images/1-mini.jpg" alt="Склад каталог инструмента - система учета инструмента">
+                        <div class="screenshot-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="screenshot-caption">Каталог инструмента - основа учета</div>
+                </div>
+                <div class="screenshot-container">
+                    <div class="screenshot-item" data-src="images/2.jpg">
+                        <img src="images/2-mini.jpg" alt="Выдача инструмента - учет выдачи инструментов">
+                        <div class="screenshot-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="screenshot-caption">Модуль выдачи инструмента</div>
+                </div>
+                <div class="screenshot-container">
+                    <div class="screenshot-item" data-src="images/3.jpg">
+                        <img src="images/3-mini.jpg" alt="Поиск инструмента по параметрам - система учета">
+                        <div class="screenshot-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="screenshot-caption">Умный поиск по параметрам</div>
+                </div>
+                <div class="screenshot-container">
+                    <div class="screenshot-item" data-src="images/4.jpg">
+                        <img src="images/4-mini.jpg" alt="Заявка на закупку инструмента - автоматизация учета">
+                        <div class="screenshot-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="screenshot-caption">Формирование заявок на закупку</div>
+                </div>
+                <div class="screenshot-container">
+                    <div class="screenshot-item" data-src="images/5.jpg">
+                        <img src="images/5-mini.jpg" alt="Окно выдачи инструмента - учет на предприятии">
+                        <div class="screenshot-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="screenshot-caption">Окно оперативной выдачи</div>
+                </div>
+                <div class="screenshot-container">
+                    <div class="screenshot-item" data-src="images/6.jpg">
+                        <img src="images/6-mini.jpg" alt="Окно возврата инструмента - система контроля">
+                        <div class="screenshot-overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <div class="screenshot-caption">Процедура возврата инструмента</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Преимущества -->
+    <section class="section" id="advantages">
+        <div class="container">
+            <h2 class="section-title">Преимущества DBTools</h2>
+            <p class="section-subtitle">Наша <strong>программа учета инструмента</strong> создавалась с учетом реальных потребностей малых и средних производственных предприятий.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Локальное хранение данных</h3>
+                    <p>База данных находится на вашем предприятии, а не в облаке. Это обеспечивает конфиденциальность и независимость от интернет-соединения.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Автоматизация закупок</h3>
+                    <p>Программа формирует заявки на закупку инструмента на основе складских остатков и минимальных уровней, заданных для каждого инструмента.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>Постоянное развитие</h3>
+                    <p>Мы готовы добавлять новые типы инструмента, фильтры и функционал по запросу клиентов. Программа развивается вместе с вашим бизнесом.</p>
+                </div>
+            </div>
+            
+            <div class="wide-card feature-style">
+                <h3>Гибкий экспорт данных</h3>
+                <p>Получайте отчеты в любом удобном для вас формате для дальнейшей работы, анализа или передачи данных в бухгалтерию или вышестоящему руководству. Экспорт данных в Excel, Word, CSV, HTML форматы.</p>
+                <div class="export-formats">
+                    <span class="format-badge">Excel (XLS/XLSX)</span>
+                    <span class="format-badge">Word (RTF)</span>
+                    <span class="format-badge">CSV</span>
+                    <span class="format-badge">HTML</span>
+                    <span class="format-badge">XML</span>
+                    <span class="format-badge">Текст (TXT)</span>
+                </div>
+            </div>
+            
+            <div class="wide-card accent-style">
+                <h3>Для реального цеха</h3>
+                <p>DBTools решает наболевшие проблемы учета режущего инструмента на уровне цеха. Мы не обещаем волшебных расчётов себестоимости изделий, норм прибыли или «красивых» отчётов для совещаний. Мы гарантирую решение насущных вопросов цеха: за 30 секунд вы найдёте нужный инструмент, узнаете, сколько его в цеху, сколько на складе и кому вы выдали его на прошлой неделе. Благодаря DBTools вы не останетесь в вечер пятницы без фрезы, которая срочна нужна для работы.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Цены и лицензии -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Стоимость программы учета инструмента</h2>
+            <p class="section-subtitle">Выберите оптимальный вариант для вашего предприятия. Сравните с затратами на потери инструмента!</p>
+            <div class="pricing-options">
+                <div class="license-card">
+                    <div class="license-header">
+                        <h3>Годовая подписка</h3>
+                        <div class="license-badge">АКЦИЯ</div>
+                    </div>
+                    
+                    <div class="price-with-discount">
+                        <span class="old-price-strike">7 000 ₽</span>
+                        <span class="new-price">3 000 <span class="price-period">рублей/год</span></span>
+                    </div>
+                    
+                    <div class="discount-note">для первых 100 клиентов 2026 года</div>
+                    
+                    <p class="pricing-description">Полнофункциональная система учета инструмента с ежегодной оплатой</p>
+                    
+                    <ul class="license-features">
+                        <li><i class="fas fa-check"></i> Полный доступ ко всем функциям</li>
+                        <li><i class="fas fa-check"></i> Техническая поддержка</li>
+                        <li><i class="fas fa-check"></i> Обновления программы</li>
+                        <li><i class="fas fa-check"></i> Годовая лицензия</li>
+                    </ul>
+                    
+                    <a href="#contacts" class="cta-button">Выбрать подписку</a>
+                </div>
+                
+                <div class="license-card premium">
+                    <div class="license-header">
+                        <h3>Бессрочная лицензия</h3>
+                        <div class="license-badge">ВЫГОДНО</div>
+                    </div>
+                    <div class="price">40 000 <span>рублей</span></div>
+                    <p class="pricing-description">Пожизненный доступ к программе без ограничений по времени</p>
+                    
+                    <ul class="license-features">
+                        <li><i class="fas fa-check"></i> <strong>Пожизненная лицензия</strong></li>
+                        <li><i class="fas fa-check"></i> Все функции годовой подписки</li>
+                        <li><i class="fas fa-check"></i> 1 год технической поддержки</li>
+                        <li><i class="fas fa-check"></i> 1 год бесплатных обновлений</li>
+                        <li><i class="fas fa-check"></i> <strong>Экономия в долгосрочной перспективе</strong></li>
+                    </ul>
+                    
+                    <a href="#contacts" class="cta-button">Купить бессрочно</a>
+                </div>
+            </div>
+            
+            <!-- Блок сравнения стоимости -->
+            <div class="comparison-block">
+                <h3 class="comparison-title">Сравните стоимость программы с потерями от отсутствия учета</h3>
+                
+                <div class="comparison">
+                    <div class="comparison-item">
+                        <div class="comparison-icon">
+                            <i class="fas fa-arrow-trend-down"></i>
+                        </div>
+                        <div class="comparison-item-title">Средние потери инструмента без DBTools <br>(каждый год)</div>
+                        <div class="comparison-item-price">~300 000 <span>руб</span></div>
+                    </div>
+                    
+                    <div class="vs-container">VS</div>
+                    
+                    <div class="comparison-item">
+                        <div class="comparison-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="comparison-item-title">Бессрочная лицензия DBTools</div>
+                        <div class="comparison-item-price">40 000 <span>руб</span></div>
+                    </div>
+                </div>
+                
+                <div class="loss-explanation">
+                    <h4>Откуда берутся такие потери?</h4>
+                    <p>Операторы-наладчики на трех-пяти ваших станках за год могут незаметно «списать» 5-10 фрез с вашего предприятия без какого-либо учета. Десяток фрез, которые лишь немного поработали по алюминию, а потом про них «забыли» и со склада были взяты новые фрезы. Это уже 150–300 тысяч рублей ежегодных потерь.</p>
+                    <p>А если добавить сюда дорогостоящие твердосплавные сверла (по 3–5 тысяч за штуку), пластины фрез, токарные пластины — сумма легко достигает <strong>1 миллиона рублей в год</strong> только на «мелких»  хищениях.</p>
+                </div>
+                
+                <div class="solution-block">
+                    <h4>Как DBTools решает эту проблему?</h4>
+                    <p>Система фиксирует <strong>каждую выдачу и возврат</strong>, направление инструмента в переточку, окончательное списание в лом, отслеживает остатки на складе в реальном времени, а также инструмент находящийся в цеху. Это лишь одна из многих задач, которую решает наша программа.</p>
+                </div>
+                
+                <p class="final-message">
+                    <strong>Программа учета инструмента окупается за 2-3 месяца</strong> за счет сокращения потерь и экономии времени на поиск инструмента!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Бесплатная версия -->
+    <section class="section free-section" id="free">
+        <div class="container">
+            <h2 class="section-title">Скачать бесплатно программу учета инструмента</h2>
+            <div class="free-content">
+                <p>Оцените все базовые возможности DBTools.<br><strong>Скачайте бесплатную программу учета инструмента</strong> и протестируйте её функциональность.</p>
+                
+                <div class="download-links">
+                    <div class="download-step">
+                        <h4>1. Установите сервер базы данных инструмента</h4>
+                        <a href="downloads/mysql-8.4.7-winx64.msi" target="_blank" class="cta-button download-btn mysql-btn" download>Скачать MySQL</a>
+                    </div>
+                    <div class="download-step">
+                        <h4>2. Скачайте и запустите программу</h4>
+                        <a href="downloads/DBToolsFree.rar" target="_blank" class="cta-button download-btn dbtools-btn" download>Скачать DBTools</a>
+                    </div>
+                </div>
+                
+                <p class="install-note">Подробная инструкция по установке находится внутри архива с программой.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Контакты -->
+    <section class="section contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты и время работы</h2>
+            <p class="contacts-subtitle">Свяжитесь с нами для получения консультации и приобретения расширенной версии. Поможем с внедрением <strong>системы учета инструмента на предприятии</strong>.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="far fa-clock"></i></div>
+                    <div>
+                        <h4>Время работы</h4>
+                        <p>Пн-Пт: 8:00 - 16:00</p>
+                        <p>Сб: 10:00 - 16:00</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="far fa-envelope"></i></div>
+                    <div>
+                        <h4>Электронная почта</h4>
+                        <p>dbtools@bk.ru</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-telegram"></i></div>
+                    <div>
+                        <h4>Телефон / Telegram</h4>
+                        <p>+7(901)-871-З5-З5</p>
+                        <p>@DBTools_Info</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"><i class="fas fa-tools"></i></div>
+                        <div>
+                            <div class="footer-logo-text">DBTools</div>
+                            <div class="footer-logo-subtitle">Система учета инструмента</div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://t.me/DBTools_Info" title="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="mailto:dbtools@bk.ru" title="Написать email"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-description">Программа учета режущего и мерительного инструмента для предприятий металлообработки.</div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 DBTools. <strong>Программа учета инструмента</strong> на производстве</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для просмотра скриншотов -->
+    <div class="modal" id="screenshotModal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Основной JavaScript -->
+    <script>
+        // Мобильное меню
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Модальное окно скриншотов
+        const modal = document.getElementById('screenshotModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+        
+        document.querySelectorAll('.screenshot-item').forEach(item => {
+            item.addEventListener('click', function() {
+                modalImage.src = this.getAttribute('data-src');
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
