@@ -534,11 +534,26 @@ header {
 /* =========================================== */
 /* СЕКЦИЯ: ЦЕНЫ И ЛИЦЕНЗИИ */
 /* =========================================== */
-.pricing-options {
+
+/* Сетка для карточек (оставлена для возможного расширения) */
+.pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 4rem;
+}
+
+/* Класс для одиночной карточки, чтобы сделать её уже */
+.pricing-grid--single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-grid--single .license-card {
+    max-width: 500px; /* Ограничиваем ширину */
+    width: 100%;
+    margin: 0 auto;
 }
 
 .license-card {
