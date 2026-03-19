@@ -69,7 +69,7 @@ h1, h2, h3, h4 {
     line-height: 1.6;
 }
 
-/* Тег strong - без стилизации (оставляем как есть) */
+/* Тег strong - без графического выделения, только семантика для поисковиков */
 strong {
     font-weight: normal;
     color: inherit;
@@ -307,29 +307,23 @@ header {
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 1px solid var(--light-gray);
+    border-top: 3px solid var(--secondary); /* Оранжевая полоска как у больших карточек */
 }
 
 .specialization-card:hover {
     transform: translateY(-5px);
-}
-
-.specialization-icon-circle {
-    width: 70px;
-    height: 70px;
-    background-color: var(--secondary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.2rem;
-    font-size: 1.8rem;
-    color: white;
+    box-shadow: var(--shadow-hover);
 }
 
 .specialization-card h4 {
     color: var(--primary-dark);
     margin-bottom: 0.8rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+}
+
+.specialization-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
 }
 
 /* Широкий текстовый блок в секции возможностей */
@@ -535,7 +529,7 @@ header {
 /* СЕКЦИЯ: ЦЕНЫ И ЛИЦЕНЗИИ */
 /* =========================================== */
 
-/* Сетка для карточек (оставлена для возможного расширения) */
+/* Сетка для карточек */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -543,15 +537,15 @@ header {
     margin-bottom: 4rem;
 }
 
-/* Класс для одиночной карточки, чтобы сделать её уже */
-.pricing-grid--single {
+/* Блок для карточки покупки под сравнением */
+.purchase-block {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 3rem;
 }
 
-.pricing-grid--single .license-card {
-    max-width: 500px; /* Ограничиваем ширину */
+.purchase-card {
+    max-width: 500px;
     width: 100%;
     margin: 0 auto;
 }
@@ -570,18 +564,11 @@ header {
 
 .license-card.premium {
     border-top: 3px solid var(--secondary);
-    transform: scale(1.05);
-    position: relative;
-    z-index: 1;
 }
 
 .license-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-hover);
-}
-
-.license-card.premium:hover {
-    transform: translateY(-10px) scale(1.05);
 }
 
 .license-header {
@@ -621,6 +608,10 @@ header {
 
 .license-card.premium .price {
     color: var(--secondary-dark);
+}
+
+.license-card.premium .price span {
+    color: var(--gray);
 }
 
 .license-features {
@@ -717,7 +708,7 @@ header {
 
 .vs-container {
     margin: 0.5rem 0;
-    font-size: 3.0rem;
+    font-size: 3rem;
     color: var(--secondary);
     font-weight: 700;
 }
@@ -728,47 +719,6 @@ header {
     font-size: 1.2rem;
     line-height: 1.6;
     color: var(--dark);
-}
-
-/* Компактный вариант цен */
-.price-with-discount {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1.5rem 0;
-}
-
-.old-price-strike {
-    font-size: 1.8rem;
-    text-decoration: line-through;
-    color: #999;
-    font-weight: 600;
-}
-
-.new-price {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: var(--secondary-dark);
-}
-
-.price-period {
-    font-size: 1.2rem;
-    color: var(--gray);
-    font-weight: 400;
-}
-
-.discount-note {
-    text-align: center;
-    color: var(--secondary-dark);
-    font-weight: 600;
-    font-size: 1.0rem;
-    margin-bottom: 1rem;
-    padding: 0.3rem 1rem;
-    background-color: rgba(245, 124, 0, 0.1);
-    border-radius: var(--radius);
-    display: inline-block;
-    margin: 0 auto 1.5rem;
 }
 
 /* Блок объяснения потерь */
@@ -816,7 +766,7 @@ header {
 }
 
 /* =========================================== */
-/* СЕКЦИЯ: БЕСПЛАТНАЯ ВЕРСИЯ */
+/* СЕКЦИЯ: СКАЧАТЬ ДЕМО */
 /* =========================================== */
 .free-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -828,55 +778,22 @@ header {
     text-align: center;
 }
 
-.free-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: var(--dark);
-}
-
 .download-links {
-    margin: 2.5rem 0;
+    margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
     align-items: center;
 }
 
-.download-step {
-    width: 100%;
-    max-width: 500px;
-}
-
-.download-step h4 {
-    margin-bottom: 1rem;
-    color: var(--primary-dark);
-}
-
 .download-btn {
-    min-width: 200px;
-    padding: 1rem 1.5rem;
-}
-
-.mysql-btn {
-    background-color: var(--gray);
-}
-
-.mysql-btn:hover {
-    background-color: #424242;
-}
-
-.dbtools-btn {
-    background-color: var(--secondary);
-}
-
-.dbtools-btn:hover {
-    background-color: var(--secondary-dark);
+    font-size: 1.5rem;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
 }
 
 .install-note {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--gray);
-    margin-top: 1.5rem;
 }
 
 /* =========================================== */
@@ -941,14 +858,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 180px;
+    padding: 20px 0;
 }
 
 .footer-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
     gap: 25px;
 }
 
@@ -1001,7 +917,6 @@ footer {
 .footer-right {
     display: flex;
     align-items: center;
-    height: 100%;
 }
 
 .footer-description {
@@ -1250,10 +1165,10 @@ footer {
     }
     
     .footer-content {
-        min-height: auto;
         flex-direction: column;
         gap: 30px;
         text-align: center;
+        padding: 30px 0;
     }
     
     .footer-left {
@@ -1318,17 +1233,9 @@ footer {
         padding: 3rem 0;
     }
     
-    .features-grid, .specialization-grid, .pricing-options {
+    .features-grid, .specialization-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-    }
-    
-    .license-card.premium {
-        transform: none;
-    }
-    
-    .license-card.premium:hover {
-        transform: translateY(-10px);
     }
     
     .license-card {
@@ -1359,7 +1266,7 @@ footer {
     }
     
     .comparison-block .comparison-item-title {
-        min-height: 3.5rem;
+        min-height: auto;
     }
     
     /* Форматы экспорта */
@@ -1384,12 +1291,9 @@ footer {
     }
     
     /* Скачивание */
-    .download-links {
-        gap: 2rem;
-    }
-    
-    .download-step {
-        width: 100%;
+    .download-btn {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
     }
     
     /* Адаптивность для блога */
