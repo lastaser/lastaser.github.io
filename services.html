@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Постпроцессоры ЧПУ, Программы для ЧПУ, 3D моделирование | DBTools</title>
+    
+    <meta name="description" content="Разработка постпроцессоров для станков ЧПУ (Fanuc, Siemens, Heidenhain). Программирование в Siemens NX CAM, SolidWorks. 3D моделирование деталей и оснастки.">
+    <meta name="keywords" content="постпроцессор ЧПУ, программирование ЧПУ, Siemens NX CAM, SolidWorks, 3D моделирование, постпроцессор Fanuc, постпроцессор Siemens">
+    
+    <!-- Schema.org разметка -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DBTools - Программа учета инструмента",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Windows",
+        "description": "Программа учета режущего инструмента на производстве. Система учета инструмента.",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Бессрочная лицензия", 
+                "price": "20000",
+                "priceCurrency": "RUB"
+            }
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "DBTools",
+            "url": "https://dbtools.ru"
+        }
+    }
+    </script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="css/all.min.css">
+	<!-- Предзагружаем критически важные шрифты -->
+	<link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/roboto-condensed-400.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    -->
+    <!-- Яндекс.Метрика -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105734714', 'ym');
+        ym(105734714, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/105734714" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-tools"></i></div>
+                <div>
+                    <div class="logo-text">DBTools</div>
+                    <div class="logo-subtitle">Учет инструмента</div>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Главная</a>
+                <a href="services.html" class="active">Услуги</a>                
+                <a href="blog.html">Блог</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный баннер (светлый) -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Постпроцессоры</h1>
+                <h1>Программы ЧПУ</h1>
+                <h1>3D Моделирование</h1>
+                <p>Пишу <strong>постпроцессоры</strong> под Siemens NX, <strong>создание программ обработки деталей в Siemens NX CAM</strong>, <strong>3D моделирование</strong> в SolidWorks и Siemens NX.</p>
+                <a href="#contacts" class="cta-button">Получить консультацию</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/logo.jpg" alt="Интерфейс программы учета инструмента DBTools">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Секция услуг (4 кнопки) - продолжение баннера, без отдельного фона -->
+    <section class="services-buttons-section">
+        <div class="container">
+            <div class="services-buttons-grid">
+                <a href="index.html" class="service-btn">
+                    <div class="service-btn-icon"><i class="fas fa-database"></i></div>
+                    <div class="service-btn-text">
+                        <h4>Учет инструмента</h4>
+                        <p>DBTools</p>
+                    </div>
+                </a>
+                <a href="#postprocessors" class="service-btn">
+                    <div class="service-btn-icon"><i class="fas fa-gears"></i></div>
+                    <div class="service-btn-text">
+                        <h4>Постпроцессоры</h4>
+                        <p>3, 4, 5 осей</p>
+                    </div>
+                </a>
+                <a href="#cnc-programs" class="service-btn">
+                    <div class="service-btn-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="service-btn-text">
+                        <h4>Программы ЧПУ</h4>
+                        <p>Siemens NX CAM</p>
+                    </div>
+                </a>
+                <a href="#3d-modeling" class="service-btn">
+                    <div class="service-btn-icon"><i class="fas fa-shapes"></i></div>
+                    <div class="service-btn-text">
+                        <h4>3D Моделирование</h4>
+                        <p>NX, SolidWorks</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Что предлагаю (светлый фон - как продолжение) -->
+    <section class="section" id="services-offer">
+        <div class="container">
+            <h2 class="section-title">Что ещё я предлагаю</h2>
+            <p class="section-subtitle">Комплекс услуг связанных с работой со станками с ЧПУ</p>
+            
+            <div class="services-page-grid">
+                <div class="services-page-card" id="postprocessors">
+                    <div class="service-icon"><i class="fas fa-gears"></i></div>
+                    <h3>Постпроцессоры</h3>
+                    <p>Создание и настройка постпроцессоров под ваши станки</p>
+                    <ul class="service-list">
+                        <li>Fanuc</li>
+                        <li>Siemens</li>
+                        <li>Heidenhain</li>
+                        <li>HNC и другие стойки</li>
+                    </ul>
+                </div>
+                
+                <div class="services-page-card" id="cnc-programs">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Программы ЧПУ</h3>
+                    <p>Написание управляющих программ в Siemens NX CAM</p>
+                    <ul class="service-list">
+                        <li>Фрезерная обработка</li>
+                        <li>Токарная обработка</li>
+                        <li>3, 4, 5 координат</li>
+                    </ul>
+                </div>
+                
+                <div class="services-page-card" id="3d-modeling">
+                    <div class="service-icon"><i class="fas fa-shapes"></i></div>
+                    <h3>3D моделирование</h3>
+                    <p>Проектирование деталей и оснастки</p>
+                    <ul class="service-list">
+                        <li>Siemens NX</li>
+                        <li>SolidWorks</li>
+                        <li>Подготовка чертежей</li>
+                        <li>Реверс-инжиниринг</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Примеры работ (серый фон - чередование) -->
+    <section class="section" style="background-color: var(--light);" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Примеры работ</h2>
+            <p class="section-subtitle">Станки, для которых были разработаны постпроцессоры</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/stan1.jpg" alt="Komatech">
+                        <span class="portfolio-badge">3 оси</span>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Обрабатывающий центр Komatech</h3>
+                        <span class="machine-type">Фрезерный станок Komatech</span>
+                        <p>Постпроцессор для 3-осевого фрезерного станка Komatech. Стойка Fanuc.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Постпроцессор</span>
+                            <span class="tag">Fanuc</span>
+                            <span class="tag">3 оси</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/stan2.jpg" alt="Vesta">
+                        <span class="portfolio-badge">3 оси</span>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Вертикально-фрезерный центр Vesta</h3>
+                        <span class="machine-type">Фрезерный станок 3х-координатный</span>
+                        <p>Постпроцессор для обрабатывающего центра Vesta 1000. Стойка Fanuc.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Постпроцессор</span>
+                            <span class="tag">Fanuc</span>
+                            <span class="tag">3 оси</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/stan3.jpg" alt="MIKRO">
+                        <span class="portfolio-badge">3 оси</span>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Высокоточный фрезерный станок</h3>
+                        <span class="machine-type">Фрезерный станок MIKRO Heidenhain</span>
+                        <p>Постпроцессор для высокоскоростного фрезерного станка MIKRO. Стойка Heidenhain-530.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Постпроцессор</span>
+                            <span class="tag">Heidenhain 530</span>
+                            <span class="tag">3 оси</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/stan4.jpg" alt="SPINER">
+                        <span class="portfolio-badge">5 осей</span>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>5-координатный фрезерный станок</h3>
+                        <span class="machine-type">SPINER TNC620</span>
+                        <p>Постпроцессор для 5-осевого фрезерного станка SPINER. Стойка Heidenhain-620.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Постпроцессор</span>
+                            <span class="tag">Heidenhain 620</span>
+                            <span class="tag">5 осей</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/stan5.jpg" alt="IMU">
+                        <span class="portfolio-badge">5 осей</span>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Обрабатывающий центр IMU 5Х 400</h3>
+                        <span class="machine-type">IMU 5Х 400 PRO</span>
+                        <p>Постпроцессор для 5-осевого фрезерного станка IMU. Стойка HNC.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Постпроцессор</span>
+                            <span class="tag">HNC</span>
+                            <span class="tag">5 осей</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/stan6.jpg" alt="DMT">
+                        <span class="portfolio-badge">Токарный</span>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Токарный центр DMT</h3>
+                        <span class="machine-type">DMT DM2500/600 MY</span>
+                        <p>Постпроцессор для токарного обрабатывающего центра. Стойка Fanuc.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Постпроцессор</span>
+                            <span class="tag">Fanuc</span>
+                            <span class="tag">Токарный</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Готовые постпроцессоры (светлый фон - чередование) -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Готовые постпроцессоры</h2>
+            <p class="section-subtitle">Постпроцессоры, уже разработанные под различные станки и стойки ЧПУ</p>
+            
+            <div class="ready-postprocessors">
+                <ul class="postprocessors-list">
+                    <li><i class="fas fa-check-circle"></i> Fanuc (3 оси)</li>
+                    <li><i class="fas fa-check-circle"></i> Fanuc (4 оси)</li>
+                    <li><i class="fas fa-check-circle"></i> Fanuc (5 осей)</li>
+                    <li><i class="fas fa-check-circle"></i> Heidenhain TNC 530 (3 оси)</li>
+                    <li><i class="fas fa-check-circle"></i> Heidenhain TNC 620 (3 + 2 оси)</li>
+                    <li><i class="fas fa-check-circle"></i> HNC (3 оси)</li>
+                    <li><i class="fas fa-check-circle"></i> HNC (5 осей)</li>
+                    <li><i class="fas fa-check-circle"></i> Komatech (Fanuc)</li>
+                    <li><i class="fas fa-check-circle"></i> Vesta (Fanuc)</li>
+                    <li><i class="fas fa-check-circle"></i> MIKRO (Heidenhain)</li>
+                    <li><i class="fas fa-check-circle"></i> SPINER (Heidenhain)</li>
+                    <li><i class="fas fa-check-circle"></i> IMU (HNC)</li>
+                </ul>
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--gray);">Если вашей стойки нет в списке — напишите, доработаем под имеющиеся постпроцессоры под ваш станок.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Программы и 3D модели (серый фон - чередование) -->
+    <section class="section" style="background-color: var(--light);" id="showcase">
+        <div class="container" id="cnc-programs">
+            <h2 class="section-title">Программы и 3D модели</h2>
+            <p class="section-subtitle">Примеры разработанных управляющих программ и 3D моделей для ЧПУ</p>
+            
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track">
+                        <li class="carousel-slide current-slide">
+                            <img src="images/k1.jpg" alt="Обработка рамы #1">
+                            <div class="slide-caption">Обработка рамы #1 (Алюминий)</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="images/k2.jpg" alt="Обработка рамы #2">
+                            <div class="slide-caption">Обработка рамы #2 (Алюминий)</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="images/k3.jpg" alt="3D модель крышки">
+                            <div class="slide-caption">3D модель крышки</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="images/k4.jpg" alt="3D модель кронштейна">
+                            <div class="slide-caption">3D модель кронштейна</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="images/k5.jpg" alt="3D модель корпуса">
+                            <div class="slide-caption">3D модель и обработка корпуса #1</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="images/k6.jpg" alt="Обработка корпуса #2">
+                            <div class="slide-caption">3D модель и обработка корпуса #2</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="images/k7.jpg" alt="Корпус прибора">
+                            <div class="slide-caption">Программа обработки корпуса прибора</div>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="images/k8.jpg" alt="Деталь сложной формы">
+                            <div class="slide-caption">Программа обработки детали сложной формы</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="carousel-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <div class="carousel-nav" id="carouselNav"></div>
+        </div>
+    </section>
+
+    <!-- Секция: Стоимость (светлый фон) -->
+    <section class="section" id="pricing-services">
+        <div class="container">
+            <h2 class="section-title">Стоимость услуг</h2>
+            <p class="section-subtitle">Цена зависит от сложности задачи и объема работ</p>
+            
+            <div class="pricing-services-grid">
+                <div class="pricing-services-card">
+                    <h3>Разработка постпроцессора</h3>
+                    <div class="price">от 60 000 <span>₽</span></div>
+                    <p class="price-note">Зависит от сложности станка и стойки ЧПУ. За сложные проекты не берусь. Работаю на базе ранее разработанных постов.</p>
+                    <ul class="pricing-features-list">
+                        <li>Анализ</li>
+                        <li>Разработка</li>
+                        <li>Тестирование</li>
+                        <li>Корректировка</li>
+                        <li>Поддержка 1 год</li>
+                        <li>Обучение</li>
+                    </ul>
+                    <a href="#contacts" class="cta-button" style="width: 100%; text-align: center;">Обсудить задачу</a>
+                </div>
+                
+                <div class="pricing-services-card">
+                    <h3>Программы ЧПУ и 3D модели</h3>
+                    <div class="price">от 5 000 <span>₽</span></div>
+                    <p class="price-note">1 000 рублей за час работы</p>
+                    <ul class="pricing-features-list">
+                        <li>3D моделирование</li>
+                        <li>Чертежи</li>
+                        <li>Создание УП</li>
+                        <li>Карты наладок</li>
+                        <li>Оптимизация времени</li>
+                        <li>Работа в NX / SolidWorks</li>
+                    </ul>
+                    <a href="#contacts" class="cta-button" style="width: 100%; text-align: center;">Создать 3D модель, УП</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Контакты (серый фон) -->
+    <section class="section contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты и время работы</h2>
+            <p class="contacts-subtitle">Пишите или звоните. Работаю по Нижнему Новгороду и удаленно по всей России.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="far fa-clock"></i></div>
+                    <div>
+                        <h4>Время работы</h4>
+                        <p>8:00 - 20:00 (МСК)</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="far fa-envelope"></i></div>
+                    <div>
+                        <h4>Электронная почта</h4>
+                        <p>dbtools@bk.ru</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-telegram"></i></div>
+                    <div>
+                        <h4>Телефон / Telegram</h4>
+                        <p>+7 (901) 871-З5-З5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-col-left">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"><i class="fas fa-tools"></i></div>
+                        <div>
+                            <div class="footer-logo-text">DBTools</div>
+                            <div class="footer-logo-subtitle">Система учета инструмента</div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://t.me/DBTools_Info" title="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="mailto:dbtools@bk.ru" title="Написать email"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-col-center">
+                    <div class="footer-description">
+                        Программа учета режущего и мерительного инструмента для предприятий металлообработки.
+                    </div>
+                </div>
+                
+                <div class="footer-col footer-col-right">
+                    <ul class="footer-services-list">
+                        <li><a href="index.html">Учет инструмента</a></li>
+                        <li><a href="services.html#postprocessors">Постпроцессоры</a></li>
+                        <li><a href="services.html#cnc-programs">Программы ЧПУ</a></li>
+                        <li><a href="services.html#3d-modeling">3D Моделирование</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 DBTools. <strong>Программа учета инструмента</strong> на производстве</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        const track = document.getElementById('track');
+        const slides = Array.from(track.children);
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const navContainer = document.getElementById('carouselNav');
+        
+        let currentIndex = 0;
+        let autoPlayInterval;
+
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('current-dot');
+            dot.addEventListener('click', () => {
+                moveToSlide(index);
+                resetAutoPlay();
+            });
+            navContainer.appendChild(dot);
+        });
+
+        const dots = Array.from(navContainer.children);
+
+        function updateDots(index) {
+            dots.forEach(dot => dot.classList.remove('current-dot'));
+            dots[index].classList.add('current-dot');
+        }
+
+        function moveToSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            
+            const amountToMove = -100 * index;
+            track.style.transform = `translateX(${amountToMove}%)`;
+            currentIndex = index;
+            updateDots(currentIndex);
+        }
+
+        function nextSlide() {
+            moveToSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            moveToSlide(currentIndex - 1);
+        }
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 4000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            startAutoPlay();
+        }
+
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetAutoPlay();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetAutoPlay();
+            });
+        }
+
+        startAutoPlay();
+    </script>
+</body>
+</html>

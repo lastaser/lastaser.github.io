@@ -9,17 +9,43 @@
     <meta name="description" content="Статьи и решения по организации учета инструмента на производстве. Проблемы потери, списания, инвентаризации инструмента и их автоматизация с помощью DBTools.">
     <meta name="keywords" content="учет инструмента на производстве, потеря инструмента, списание инструмента, инвентаризация инструмента, автоматизация учета, инструментальное хозяйство">
     
-    <!-- Подключение иконок Font Awesome -->
+    <!-- Schema.org разметка -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DBTools - Программа учета инструмента",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Windows",
+        "description": "Программа учета режущего инструмента на производстве. Система учета инструмента.",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Бессрочная лицензия", 
+                "price": "20000",
+                "priceCurrency": "RUB"
+            }
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "DBTools",
+            "url": "https://dbtools.ru"
+        }
+    }
+    </script>
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="css/all.min.css">
-    
-    <!-- Основные стили сайта -->
+	<!-- Предзагружаем критически важные шрифты -->
+	<link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/roboto-condensed-400.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Основные стили -->
     <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Резервные шрифты -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--
+	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    
+    -->
     <!-- Яндекс.Метрика -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
@@ -27,8 +53,7 @@
             m[i].l=1*new Date();
             for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
-
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105734714', 'ym');
         ym(105734714, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/105734714" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -51,12 +76,7 @@
             
             <nav class="nav-links" id="navLinks">
                 <a href="index.html">Главная</a>
-                <a href="index.html#features">Возможности</a>
-                <a href="index.html#screenshots">Скриншоты</a>
-                <a href="index.html#advantages">Преимущества</a>
-                <a href="index.html#pricing">Цена</a>
-                <a href="index.html#free">Скачать</a>
-                <a href="index.html#contacts">Контакты</a>
+				<a href="services.html">Услуги</a>				
                 <a href="blog.html" class="active">Блог</a>
             </nav>
         </div>
@@ -1097,35 +1117,48 @@
         </section>
     </main>
 
-    <!-- Подвал сайта -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">
-                        <div class="footer-logo-icon"><i class="fas fa-tools"></i></div>
-                        <div>
-                            <div class="footer-logo-text">DBTools</div>
-                            <div class="footer-logo-subtitle">База инструмента</div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://t.me/DBTools_Info" title="Telegram"><i class="fab fa-telegram"></i></a>
-                        <a href="mailto:dbtools@bk.ru" title="Написать email"><i class="far fa-envelope"></i></a>
+<!-- Подвал сайта -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Левая колонка: логотип и соцсети -->
+            <div class="footer-col footer-col-left">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon"><i class="fas fa-tools"></i></div>
+                    <div>
+                        <div class="footer-logo-text">DBTools</div>
+                        <div class="footer-logo-subtitle">Система учета инструмента</div>
                     </div>
                 </div>
-                
-                <div class="footer-right">
-                    <div class="footer-description">Программа учета режущего и мерительного инструмента для предприятий металлообработки</div>
+                <div class="social-links">
+                    <a href="https://t.me/DBTools_Info" title="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="mailto:dbtools@bk.ru" title="Написать email"><i class="far fa-envelope"></i></a>
                 </div>
             </div>
             
-            <div class="copyright">
-                <p>&copy; 2026 DBTools. Все права защищены.</p>
+            <!-- Центральная колонка: описание -->
+            <div class="footer-col footer-col-center">
+                <div class="footer-description">
+                    Программа учета режущего и мерительного инструмента для предприятий металлообработки.
+                </div>
+            </div>
+            
+            <!-- Правая колонка: сервисные ссылки -->
+            <div class="footer-col footer-col-right">
+                <ul class="footer-services-list">
+                    <li><a href="index.html">Учет инструмента</a></li>
+                    <li><a href="services.html#postprocessors">Постпроцессоры</a></li>
+                    <li><a href="services.html#cnc-programs">Программы ЧПУ</a></li>
+                    <li><a href="services.html#3d-modeling">3D Моделирование</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+        
+        <div class="copyright">
+            <p>&copy; 2026 DBTools. <strong>Программа учета инструмента</strong> на производстве</p>
+        </div>
+    </div>
+</footer>
 
     <!-- Основной JavaScript -->
     <script>
