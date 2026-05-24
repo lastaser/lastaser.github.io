@@ -80,7 +80,7 @@
         </div>
     </header>
 
-    <!-- Главный баннер (светлый) -->
+ <!-- ГЛАВНЫЙ БАННЕР (HERO) -->
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
@@ -88,49 +88,59 @@
                 <h1>Программы ЧПУ</h1>
                 <h1>3D Моделирование</h1>
                 <p>Пишу <strong>постпроцессоры</strong> под Siemens NX, <strong>создание программ обработки деталей в Siemens NX CAM</strong>, <strong>3D моделирование</strong> в SolidWorks и Siemens NX.</p>
-                <a href="#contacts" class="cta-button">Получить консультацию</a>
+                <!-- Блок с 4 кнопками (Новый порядок, Светлый стиль) -->
+                <div class="hero-services-grid">
+                    <!-- 1. Учет инструмента -->
+                    <a href="#features" class="hero-service-item">
+                        <div class="hero-service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="hero-service-text">
+                            <h4>Уче т инструмента</h4>
+                            <p>DBTools</p>
+                        </div>
+                    </a>
+                    
+                    <!-- 2. Постпроцессоры -->
+                    <a href="services.html#postprocessors" class="hero-service-item">
+                        <div class="hero-service-icon">
+                            <i class="fas fa-gears"></i>
+                        </div>
+                        <div class="hero-service-text">
+                            <h4>Постпроцессоры</h4>
+                            <p>3, 4, 5 осей</p>
+                        </div>
+                    </a>
+                    
+                    <!-- 3. Программы ЧПУ -->
+                    <a href="services.html#cnc-programs" class="hero-service-item">
+                        <div class="hero-service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="hero-service-text">
+                            <h4>Программы ЧПУ</h4>
+                            <p>Siemens NX CAM</p>
+                        </div>
+                    </a>
+                    
+                    <!-- 4. 3D Моделирование -->
+                    <a href="services.html#3d-modeling" class="hero-service-item">
+                        <div class="hero-service-icon">
+                            <i class="fas fa-shapes"></i>
+                        </div>
+                        <div class="hero-service-text">
+                            <h4>3D Моделирование</h4>
+                            <p>NX, SolidWorks</p>
+                        </div>
+                    </a>
+                </div>
             </div>
+            
             <div class="hero-image">
-                <img src="images/logo-cnc.jpg" alt="Интерфейс программы учета инструмента DBTools">
+                <img src="images/logo-cnc.jpg" alt="Интерфейс DBTools">
             </div>
         </div>
-    </section>
-    
-    <!-- Секция услуг (4 кнопки) - продолжение баннера, без отдельного фона -->
-    <section class="services-buttons-section">
-        <div class="container">
-            <div class="services-buttons-grid">
-                <a href="index.html" class="service-btn">
-                    <div class="service-btn-icon"><i class="fas fa-database"></i></div>
-                    <div class="service-btn-text">
-                        <h4>Учет инструмента</h4>
-                        <p>DBTools</p>
-                    </div>
-                </a>
-                <a href="#postprocessors" class="service-btn">
-                    <div class="service-btn-icon"><i class="fas fa-gears"></i></div>
-                    <div class="service-btn-text">
-                        <h4>Постпроцессоры</h4>
-                        <p>3, 4, 5 осей</p>
-                    </div>
-                </a>
-                <a href="#cnc-programs" class="service-btn">
-                    <div class="service-btn-icon"><i class="fas fa-laptop-code"></i></div>
-                    <div class="service-btn-text">
-                        <h4>Программы ЧПУ</h4>
-                        <p>Siemens NX CAM</p>
-                    </div>
-                </a>
-                <a href="#3d-modeling" class="service-btn">
-                    <div class="service-btn-icon"><i class="fas fa-shapes"></i></div>
-                    <div class="service-btn-text">
-                        <h4>3D Моделирование</h4>
-                        <p>NX, SolidWorks</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+    </section>	
 
     <!-- Секция: Что предлагаю (светлый фон - как продолжение) -->
     <section class="section" id="services-offer">
@@ -408,62 +418,61 @@
         </div>
     </section>
 
-    <!-- Секция: Контакты (серый фон) -->
+  <!-- Секция: Контакты -->
     <section class="section contacts" id="contacts">
         <div class="container">
             <h2 class="section-title">Контакты и время работы</h2>
-            <p class="contacts-subtitle">Пишите или звоните. Работаю по Нижнему Новгороду и удаленно по всей России.</p>
+            <p class="contacts-subtitle">Свяжитесь с нами для получения консультации. Поможем с внедрением <strong>системы учета инструмента на предприятии</strong>.</p>
             
             <div class="contact-info">
+                <!-- Время работы -->
                 <div class="contact-item">
                     <div class="contact-icon"><i class="far fa-clock"></i></div>
-                    <div>
+                    <div class="contact-text">
                         <h4>Время работы</h4>
                         <p>8:00 - 20:00 (МСК)</p>
                     </div>
                 </div>
+
+                <!-- Email -->
                 <div class="contact-item">
                     <div class="contact-icon"><i class="far fa-envelope"></i></div>
-                    <div>
+                    <div class="contact-text">
                         <h4>Электронная почта</h4>
                         <p>dbtools@bk.ru</p>
                     </div>
                 </div>
+
+                <!-- Телефон / Telegram -->
                 <div class="contact-item">
                     <div class="contact-icon"><i class="fab fa-telegram"></i></div>
-                    <div>
-                        <h4>Телефон / Telegram</h4>
+                    <div class="contact-text">
+                        <h4>Телефон / MAX / Telegram</h4>
                         <p>+7 (901) 871-З5-З5</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </section>
 
+    <!-- ПОДВАЛ -->
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col footer-col-left">
+                <div class="footer-col-left">
                     <div class="footer-logo">
-                        <div class="footer-logo-icon"><i class="fas fa-tools"></i></div>
+                        <i class="fa-solid fa-screwdriver-wrench footer-logo-icon"></i>
                         <div>
                             <div class="footer-logo-text">DBTools</div>
                             <div class="footer-logo-subtitle">Система учета инструмента</div>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://t.me/DBTools_Info" title="Telegram"><i class="fab fa-telegram"></i></a>
-                        <a href="mailto:dbtools@bk.ru" title="Написать email"><i class="far fa-envelope"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-col footer-col-center">
-                    <div class="footer-description">
+                    <p class="footer-description">
                         Программа учета режущего и мерительного инструмента для предприятий металлообработки.
-                    </div>
+                    </p>
                 </div>
                 
-                <div class="footer-col footer-col-right">
+                <div class="footer-col-center">
                     <ul class="footer-services-list">
                         <li><a href="index.html">Учет инструмента</a></li>
                         <li><a href="services.html#postprocessors">Постпроцессоры</a></li>
@@ -471,10 +480,26 @@
                         <li><a href="services.html#3d-modeling">3D Моделирование</a></li>
                     </ul>
                 </div>
+
+                <div class="footer-col-right">
+                    <div class="social-links">
+                        <!-- Rutube (просто иконка Play) -->
+                        <a href="https://rutube.ru/channel/67167419/" target="_blank" title="Rutube">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="#" target="_blank" title="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <!-- VK -->
+                        <a href="https://vk.com/dbtools" target="_blank" title="VKontakte">
+                            <i class="fa-brands fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            
             <div class="copyright">
-                <p>&copy; 2026 DBTools. <strong>Программа учета инструмента</strong> на производстве</p>
+                &copy; 2026 DBTools. Программа учета инструмента на производстве
             </div>
         </div>
     </footer>
