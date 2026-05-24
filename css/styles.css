@@ -1,6 +1,6 @@
-/* =========================================== */
-/* ОСНОВНЫЕ ПЕРЕМЕННЫЕ И СБРОС */
-/* =========================================== */
+/* =========================================== /
+/ ОСНОВНЫЕ ПЕРЕМЕННЫЕ И СБРОС /
+/ =========================================== */
 :root {
     --primary: #1a73e8;
     --primary-dark: #0d47a1;
@@ -25,7 +25,6 @@
     src: url('../fonts/inter-300.woff2') format('woff2');
     font-display: swap;
 }
-
 /* inter-400 - latin */
 @font-face {
     font-family: 'Inter';
@@ -34,7 +33,6 @@
     src: url('../fonts/inter-400.woff2') format('woff2');
     font-display: swap;
 }
-
 /* inter-500 - latin */
 @font-face {
     font-family: 'Inter';
@@ -43,7 +41,6 @@
     src: url('../fonts/inter-500.woff2') format('woff2');
     font-display: swap;
 }
-
 /* inter-600 - latin */
 @font-face {
     font-family: 'Inter';
@@ -52,7 +49,6 @@
     src: url('../fonts/inter-600.woff2') format('woff2');
     font-display: swap;
 }
-
 /* inter-700 - latin */
 @font-face {
     font-family: 'Inter';
@@ -61,7 +57,6 @@
     src: url('../fonts/inter-700.woff2') format('woff2');
     font-display: swap;
 }
-
 /* roboto-condensed-400 - latin */
 @font-face {
     font-family: 'Roboto Condensed';
@@ -70,7 +65,6 @@
     src: url('../fonts/roboto-condensed-400.woff2') format('woff2');
     font-display: swap;
 }
-
 /* roboto-condensed-700 - latin */
 @font-face {
     font-family: 'Roboto Condensed';
@@ -138,9 +132,9 @@ strong {
     color: inherit;
 }
 
-/* =========================================== */
-/* ШАПКА САЙТА */
-/* =========================================== */
+/* =========================================== /
+/ ШАПКА САЙТА /
+/ =========================================== */
 header {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: white;
@@ -225,11 +219,11 @@ header {
     cursor: pointer;
 }
 
-/* =========================================== */
-/* ГЛАВНЫЙ БАННЕР (HERO) */
-/* =========================================== */
+/* =========================================== /
+/ ГЛАВНЫЙ БАННЕР (HERO) /
+/ =========================================== */
 .hero {
-    padding: 5rem 0 2rem 0;
+    padding: 5rem 0 3rem 0;
     background: #ffffff;
 }
 
@@ -261,12 +255,14 @@ header {
     font-size: 2.8rem;
     color: var(--primary-dark);
     margin-bottom: 1.5rem;
+    line-height: 1.1;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--gray);
     margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .cta-button {
@@ -290,89 +286,105 @@ header {
     box-shadow: 0 6px 12px rgba(245, 124, 0, 0.3);
 }
 
-/* =========================================== */
-/* СЕКЦИЯ УСЛУГ (4 кнопки в линию) */
-/* =========================================== */
-.services-buttons-section {
-    padding: 0rem 0 3rem;
-    background: transparent;
-}
 
-.services-buttons-grid {
+
+/* Сетка кнопок услуг в Hero */
+.hero-services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    max-width: 1100px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 1rem;
+    margin-top: 1rem;
+    max-width: 500px; /* Ограничиваем ширину блока кнопок, чтобы они не разъезжались */
 }
 
-.service-btn {
+/* Светлый стиль кнопок */
+.hero-service-item {
     background: white;
+    padding: 0.8rem 1rem; /* Чуть компактнее */
+    border-radius: var(--radius);
     border: 1px solid var(--border-color);
-    border-radius: 14px;
-    padding: 1rem 1rem;
+    box-shadow: var(--shadow);
     transition: all 0.3s ease;
-    text-decoration: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 1rem;
-    box-shadow: var(--shadow);
+    text-decoration: none;
 }
 
-.service-btn:hover {
-    background: var(--primary);
-    transform: translateY(-3px);
-    border-color: var(--primary);
+.hero-service-item:hover {
+    transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
 }
 
-.service-btn-icon {
+/* Иконка в кнопках Hero (Без серого фона) */
+.hero-service-icon {
+    font-size: 1.8rem; /* Размер иконки как в оригинале */
+    color: var(--primary); /* Синий цвет иконки */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto; /* Убираем фиксированную ширину квадрата */
+    height: auto; /* Убираем фиксированную высоту */
+    background-color: transparent; /* Прозрачный фон вместо серого */
+    border-radius: 0; /* Убираем скругление */
     flex-shrink: 0;
-    width: 48px;
-    text-align: center;
 }
 
-.service-btn-icon i {
-    font-size: 1.8rem;
-    color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-.service-btn:hover .service-btn-icon i {
-    color: white;
-}
-
-.service-btn-text {
+.hero-service-text {
     text-align: left;
 }
 
-.service-btn-text h4 {
-    font-size: 1.1rem;
-    margin-bottom: 0.1rem;
+.hero-service-text h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
     color: var(--primary-dark);
     font-weight: 700;
-    transition: all 0.3s ease;
+    line-height: 1.2;
 }
 
-.service-btn:hover .service-btn-text h4 {
-    color: white;
-}
-
-.service-btn-text p {
-    font-size: 0.85rem;
+.hero-service-text p {
+    font-size: 0.8rem;
     color: var(--gray);
-    margin-bottom: 0;
-    transition: all 0.3s ease;
+    margin: 0;
+    line-height: 1.2;
 }
 
-.service-btn:hover .service-btn-text p {
-    color: rgba(255, 255, 255, 0.85);
+/* Адаптивность */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-services-grid {
+        margin: 1rem auto 0; /* Центрируем блок кнопок */
+    }
+    
+    .hero-service-item {
+        text-align: left;
+    }
 }
 
-/* =========================================== */
-/* СЕКЦИЯ: ВОЗМОЖНОСТИ */
-/* =========================================== */
+@media (max-width: 480px) {
+    .hero-services-grid {
+        grid-template-columns: 1fr; /* 1 колонка на мобильных */
+        max-width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* =========================================== /
+/ СЕКЦИЯ: ВОЗМОЖНОСТИ /
+/ =========================================== */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -502,9 +514,9 @@ header {
     margin-bottom: 0;
 }
 
-/* =========================================== */
-/* СЕКЦИЯ: СКРИНШОТЫ */
-/* =========================================== */
+/* =========================================== /
+/ СЕКЦИЯ: СКРИНШОТЫ /
+/ =========================================== */
 .screenshots {
     background-color: var(--light);
 }
@@ -586,9 +598,9 @@ header {
     padding: 0 10px;
 }
 
-/* =========================================== */
-/* МОДАЛЬНОЕ ОКНО ДЛЯ СКРИНШОТОВ */
-/* =========================================== */
+/* =========================================== /
+/ МОДАЛЬНОЕ ОКНО ДЛЯ СКРИНШОТОВ /
+/ =========================================== */
 .modal {
     display: none;
     position: fixed;
@@ -634,9 +646,9 @@ header {
     color: var(--secondary);
 }
 
-/* =========================================== */
-/* СЕКЦИЯ: ПРЕИМУЩЕСТВА */
-/* =========================================== */
+/* =========================================== /
+/ СЕКЦИЯ: ПРЕИМУЩЕСТВА /
+/ =========================================== */
 .export-formats {
     display: flex;
     flex-wrap: wrap;
@@ -663,9 +675,9 @@ header {
     transform: translateY(-2px);
 }
 
-/* =========================================== */
-/* СЕКЦИЯ: ЦЕНЫ И ЛИЦЕНЗИИ */
-/* =========================================== */
+/* =========================================== /
+/ СЕКЦИЯ: ЦЕНЫ И ЛИЦЕНЗИИ /
+/ =========================================== */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -880,9 +892,9 @@ header {
     font-size: 1.3rem;
 }
 
-/* =========================================== */
-/* СЕКЦИЯ: СКАЧАТЬ ДЕМО */
-/* =========================================== */
+/* =========================================== /
+/ СЕКЦИЯ: СКАЧАТЬ ДЕМО /
+/ =========================================== */
 .free-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
@@ -911,9 +923,181 @@ header {
     color: var(--gray);
 }
 
-/* =========================================== */
-/* СЕКЦИЯ: КОНТАКТЫ */
-/* =========================================== */
+
+/* --- НОВЫЕ СТИЛИ ДЛЯ ИНСТРУКЦИИ ПОКУПКИ (Добавляются ниже) --- */
+.purchase-instruction-block {
+    margin-top: 3rem;
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.purchase-instruction-block h3 {
+    color: var(--primary-dark);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.instruction-steps {
+    list-style: none;
+    counter-reset: step-counter;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.instruction-steps li {
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: var(--dark);
+    font-size: 1.05rem;
+}
+
+.instruction-steps li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.instruction-steps li strong {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.video-link-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border-color);
+    text-align: center;
+}
+
+.video-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--secondary-dark);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+}
+
+.video-link-btn i {
+    font-size: 1.5rem;
+}
+
+.video-link-btn:hover {
+    background-color: rgba(230, 81, 0, 0.1);
+    color: var(--secondary);
+}
+
+/* --- Стили для видео в секции Скриншоты --- */
+.main-video-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.main-video-title {
+    font-size: 1.8rem;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.video-wrapper-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-hover);
+    background-color: #000;
+}
+
+.video-wrapper-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.playlist-links-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.playlist-link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    font-size: 1rem;
+    color: white;
+}
+
+.playlist-link-item.rutube-link {
+    background-color: #000;
+}
+
+.playlist-link-item.rutube-link:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.playlist-link-item.youtube-link {
+    background-color: #FF0000;
+}
+
+.playlist-link-item.youtube-link:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+}
+/* Стиль для кнопки VK Видео */
+.playlist-link-item.vk-link {
+    background-color: #0077FF; /* Фирменный синий цвет VK */
+}
+
+.playlist-link-item.vk-link:hover {
+    background-color: #0066DD;
+    transform: translateY(-2px);
+}
+
+/* =========================================== /
+/ СЕКЦИЯ: КОНТАКТЫ (Стиль как в Hero) /
+/ =========================================== */
 .contacts {
     background-color: var(--light);
 }
@@ -925,44 +1109,88 @@ header {
     color: var(--gray);
 }
 
+/* Контейнер для вертикального списка */
 .contact-info {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: flex-start;
+    flex-direction: column; /* Вертикально одна под другой */
     gap: 1rem;
-    padding: 1.5rem;
-    background-color: white;
+    max-width: 500px; /* Ограничиваем ширину, чтобы выглядело аккуратно */
+    margin: 0 auto;
+}
+
+/* Стиль карточки контакта (как кнопка в Hero) */
+.contact-item {
+    background: white;
+    padding: 1rem 1.5rem; /* Отступы как в Hero */
     border-radius: var(--radius);
+    border: 1px solid var(--border-color);
     box-shadow: var(--shadow);
-    min-width: 250px;
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    cursor: default; /* Курсор обычный, так как это не ссылка */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
+/* Эффект при наведении (поднятие и рамка) */
 .contact-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
 }
 
+/* Иконка (синяя, без фона) */
 .contact-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--primary);
-    margin-top: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    flex-shrink: 0;
 }
 
+/* Текст внутри карточки */
 .contact-item h4 {
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
     color: var(--primary-dark);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-/* =========================================== */
-/* ПОДВАЛ САЙТА (FOOTER) */
-/* =========================================== */
+.contact-item p {
+    font-size: 1rem; /* Чуть крупнее чем в Hero, чтобы читалось лучше */
+    color: var(--dark); /* Черный цвет, как просил */
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Убираем изменение цвета ссылок при наведении, если вдруг они обернуты в <a> */
+.contact-item a {
+    color: var(--dark);
+    text-decoration: none;
+    transition: none;
+}
+
+.contact-item a:hover {
+    color: var(--dark); /* Остаются черными */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .contact-info {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+/* =========================================== /
+/ ПОДВАЛ САЙТА (FOOTER) /
+/ =========================================== */
 footer {
     background-color: var(--dark);
     color: white;
@@ -1087,9 +1315,9 @@ footer {
     margin-top: 2rem;
 }
 
-/* =========================================== */
-/* СТРАНИЦА БЛОГА */
-/* =========================================== */
+/* =========================================== /
+/ СТРАНИЦА БЛОГА /
+/ =========================================== */
 .blog-hero {
     padding: 4rem 0 3rem;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -1112,12 +1340,15 @@ footer {
     line-height: 1.6;
 }
 
+/* --- ИЗМЕНЕННЫЕ СТИЛИ МЕНЮ (ОГЛАВЛЕНИЯ) --- */
 .blog-toc {
-    background-color: white;
-    border-radius: var(--radius);
-    padding: 2rem;
-    box-shadow: var(--shadow);
+    background-color: transparent; /* Убираем фон контейнера */
+    padding: 0;
+    box-shadow: none;
     margin-top: 2rem;
+    max-width: 800px; /* Ограничиваем ширину списка для аккуратности */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .blog-toc h2 {
@@ -1127,56 +1358,63 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    justify-content: center; /* Центрируем заголовок "Содержание" */
 }
 
 .blog-toc h2 i {
     color: var(--secondary);
 }
 
+/* Вертикальный список вместо сетки */
 .toc-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Отступ между пунктами */
 }
 
+/* Стиль пункта меню (как карточка контакта/кнопка Hero) */
 .toc-card {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1.2rem;
-    background-color: var(--light);
+    gap: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    background-color: white;
     border-radius: var(--radius);
     text-decoration: none;
     color: var(--dark);
     transition: var(--transition);
-    border: 2px solid transparent;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    width: 100%; /* На всю ширину контейнера */
 }
 
 .toc-card:hover {
-    background-color: white;
-    border-color: var(--primary);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary); /* Синяя рамка при наведении */
 }
 
 .toc-icon {
     width: 48px;
     height: 48px;
-    background-color: var(--primary);
-    border-radius: 50%;
+    background-color: var(--light); /* Светлый фон под иконкой */
+    border-radius: 8px; /* Слегка скругленный квадрат */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    color: white;
+    font-size: 1.4rem;
+    color: var(--primary); /* Синяя иконка */
     flex-shrink: 0;
 }
 
 .toc-title {
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.4;
+    font-size: 1.1rem;
 }
+/* --- КОНЕЦ ИЗМЕНЕНИЙ МЕНЮ --- */
 
+/* ОСТАЛЬНЫЕ СТИЛИ БЛОГА БЕЗ ИЗМЕНЕНИЙ */
 .blog-content {
     padding: 3rem 0 5rem;
 }
@@ -1296,9 +1534,9 @@ footer {
     transform: rotate(180deg);
 }
 
-/* =========================================== */
-/* СТРАНИЦА УСЛУГ (SERVICES.HTML) */
-/* =========================================== */
+/* =========================================== /
+/ СТРАНИЦА УСЛУГ (SERVICES.HTML) /
+/ =========================================== */
 .services-page-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1645,74 +1883,73 @@ footer {
     color: var(--secondary);
 }
 
-/* =========================================== */
-/* АДАПТИВНОСТЬ */
-/* =========================================== */
+/* =========================================== /
+/ АДАПТИВНОСТЬ /
+/ =========================================== */
 @media (max-width: 992px) {
     .hero-content {
         flex-direction: column;
         text-align: left;
     }
-    
     .hero h1 {
         font-size: 2.3rem;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
     }
-    
+
     .footer-col-left {
         align-items: center;
     }
-    
+
     .footer-col-center {
         justify-content: center;
     }
-    
+
     .footer-description {
         text-align: center;
         max-width: 100%;
     }
-    
+
     .footer-col-right {
         align-items: center;
     }
-    
+
     .footer-services-list {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
     }
-    
+
     .screenshot-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
-    
+
     .services-buttons-grid {
         gap: 1rem;
     }
-    
+
     .service-btn {
         padding: 0.8rem 0.8rem;
         gap: 0.8rem;
     }
-    
+
     .service-btn-icon {
         width: 40px;
     }
-    
+
     .service-btn-icon i {
         font-size: 1.5rem;
     }
-    
+
     .service-btn-text h4 {
         font-size: 0.95rem;
     }
-    
+
     .service-btn-text p {
         font-size: 0.75rem;
     }
@@ -1731,113 +1968,137 @@ footer {
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         gap: 1rem;
     }
-    
     .nav-links.active {
         display: flex;
     }
-    
+
     .mobile-menu-btn {
         display: block;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .section {
         padding: 3rem 0;
     }
-    
+
     .features-grid, .specialization-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     .license-card {
         padding: 2rem 1.5rem;
     }
-    
+
     .wide-card {
         padding: 2rem 1.5rem;
     }
-    
+
     .screenshot-item {
         height: 220px;
     }
-    
+
     .comparison {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .comparison-block {
         padding: 2rem 1.5rem;
     }
-    
+
     .contact-info {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .contact-item {
         width: 100%;
         max-width: 300px;
     }
     
+    /* Адаптивность для вертикальных карточек контактов */
+    .contact-card-long {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .contact-card-content {
+        text-align: center;
+    }
+
     .download-btn {
         font-size: 1.2rem;
         padding: 1rem 2rem;
     }
-    
+
     .blog-hero h1 {
         font-size: 2rem;
     }
-    
+
     .blog-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .blog-toc {
         padding: 1.5rem;
     }
-    
+
     .toc-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .article-header,
     .article-body {
         padding: 1.5rem;
     }
-    
+
     .article-header h2 {
         font-size: 1.4rem;
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
     }
-    
+
     .services-buttons-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-    
+
     .postprocessors-list {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .pricing-features-list {
         grid-template-columns: 1fr;
     }
-    
+
     .carousel-slide img {
         height: 300px;
     }
-    
+
     .carousel-btn {
         width: 35px;
         height: 35px;
         font-size: 1rem;
+    }
+    
+    /* Адаптивность инструкции покупки */
+    .instruction-steps li {
+        padding-left: 0;
+        padding-top: 3.5rem;
+        text-align: center;
+    }
+    .instruction-steps li::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .purchase-instruction-block {
+        padding: 1.5rem;
     }
 }
 
@@ -1845,62 +2106,61 @@ footer {
     .screenshot-grid {
         grid-template-columns: 1fr;
     }
-    
     .hero-image img {
         max-height: 300px;
     }
-    
+
     .footer-logo-text {
         font-size: 1.6rem;
     }
-    
+
     .comparison-item {
         min-width: 100%;
     }
-    
+
     .license-header {
         flex-direction: column;
         gap: 1rem;
         align-items: center;
         text-align: center;
     }
-    
+
     .blog-hero {
         padding: 3rem 0 2rem;
     }
-    
+
     .blog-hero h1 {
         font-size: 1.8rem;
     }
-    
+
     .toc-card {
         flex-direction: column;
         text-align: center;
         gap: 0.8rem;
     }
-    
+
     .toc-icon {
         width: 40px;
         height: 40px;
         font-size: 1rem;
     }
-    
+
     .services-buttons-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .postprocessors-list {
         grid-template-columns: 1fr;
     }
-    
+
     .services-page-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-services-list {
         flex-direction: column;
         align-items: center;
